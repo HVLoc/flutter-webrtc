@@ -8,7 +8,7 @@ import 'native/media_recorder_impl.dart' show MediaRecorderNative;
 class MediaRecorder extends rtc.MediaRecorder {
   MediaRecorder({
     String? albumName,
-  }) : _delegate = (kIsWeb || kIsWasm)
+  }) : _delegate = (kIsWeb)
             ? mediaRecorder()
             : MediaRecorderNative(albumName: albumName);
 
